@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:portada_app_nueva/ui/core/ui/colors.dart';
 
 class AppTheme {
   static ThemeData get light {
     return ThemeData.from(
-      colorScheme: ColorScheme.fromSeed(seedColor: Color(0xFF24786D)),
+      colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primary),
     ).copyWith(
       inputDecorationTheme: InputDecorationTheme(
         labelStyle: TextStyle(
@@ -12,10 +13,10 @@ class AppTheme {
           fontSize: 14,
         ),
         border: UnderlineInputBorder(
-          borderSide: BorderSide(color: Color(0xFFD6E4E0)),
+          borderSide: BorderSide(color: AppColors.lightGrey),
         ),
         enabledBorder: UnderlineInputBorder(
-          borderSide: BorderSide(color: Color(0xFFD6E4E0)),
+          borderSide: BorderSide(color: AppColors.lightGrey),
         ),
         focusedBorder: UnderlineInputBorder(
           borderSide: BorderSide(color: Color(0xFFD6E4E0)),

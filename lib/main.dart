@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:portada_app_nueva/app_navigator.dart';
-import 'package:portada_app_nueva/login.dart';
-import 'package:portada_app_nueva/portada.dart';
-import 'package:portada_app_nueva/sigin.dart';
-import 'package:portada_app_nueva/theme.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:portada_app_nueva/ui/core/navigation/app_navigator.dart';
+import 'package:portada_app_nueva/ui/core/themes/theme.dart';
+import 'package:portada_app_nueva/ui/login/view/login.dart';
+import 'package:portada_app_nueva/ui/onboarding/view/portada.dart';
+import 'package:portada_app_nueva/ui/sign_up/cubit/sig_up_cubit.dart';
+import 'package:portada_app_nueva/ui/sign_up/sigin.dart';
 
 void main() => runApp(const MyApp());
 
@@ -18,7 +20,8 @@ class MyApp extends StatelessWidget {
       routes: {
         AppNavigator.main: (_) => Home(),
         AppNavigator.login: (_) => LogIn(),
-        AppNavigator.signin: (_) => Sigin(),
+        AppNavigator.signin: (_) =>
+            BlocProvider(create: (context) => SigUpCubit(), child: Sigin()),
       },
       theme: AppTheme.light,
     );

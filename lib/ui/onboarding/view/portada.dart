@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portada_app_nueva/app_navigator.dart';
+import 'package:portada_app_nueva/ui/core/navigation/app_navigator.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
