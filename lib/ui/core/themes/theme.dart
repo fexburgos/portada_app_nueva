@@ -8,7 +8,7 @@ class AppTheme {
     ).copyWith(
       inputDecorationTheme: InputDecorationTheme(
         labelStyle: TextStyle(
-          color: Color(0xFF24786D),
+          color: AppColors.primary,
           fontWeight: FontWeight.normal,
           fontSize: 14,
         ),
@@ -19,12 +19,12 @@ class AppTheme {
           borderSide: BorderSide(color: AppColors.lightGrey),
         ),
         focusedBorder: UnderlineInputBorder(
-          borderSide: BorderSide(color: Color(0xFFD6E4E0)),
+          borderSide: BorderSide(color: AppColors.lightGrey),
         ),
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
-          backgroundColor: Color(0xFF24786D),
+          backgroundColor: AppColors.primary,
           foregroundColor: Colors.white,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadiusGeometry.circular(12),

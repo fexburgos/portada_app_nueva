@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:portada_app_nueva/utils/validators.dart';
 
 class LogIn extends StatelessWidget {
   const LogIn({super.key});
 
   @override
   Widget build(BuildContext context) {
+     final formKey = GlobalKey<FormState>();
     return Scaffold(
       appBar: AppBar(),
       body: Stack(
@@ -58,6 +60,7 @@ class LogIn extends StatelessWidget {
                         fontSize: 14,
                       ),
                       border: UnderlineInputBorder(),
+               
                     ),
                   ),
                   TextFormField(

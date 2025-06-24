@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portada_app_nueva/ui/core/navigation/app_navigator.dart';
+import 'package:portada_app_nueva/ui/core/ui/colors.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -33,17 +34,20 @@ class Home extends StatelessWidget {
                 Text(
                   "Our chat app is the perfect way to stay connected with friends and family",
                   style: TextStyle(
-                    color: Color(0xFFB9C1BE),
+                    color: AppColors.grey,
                     fontSize: 16,
                     fontWeight: FontWeight.w400,
                   ),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
+                  spacing: 16,
                   children: [
                     Image.asset('assets/icons/facebook.png'),
                     Image.asset('assets/icons/google.png'),
                     Image.asset('assets/icons/apple.png'),
+                      
+                   
                   ],
                 ),
                 Row(
@@ -74,7 +78,7 @@ class Home extends StatelessWidget {
                   child: RichText(
                     text: TextSpan(
                       text: 'Existing account?',
-                      style: TextStyle(color: Color(0xFFB9C1BE), fontSize: 14),
+                      style: TextStyle(color: AppColors.grey, fontSize: 14),
                       children: [
                         TextSpan(
                           text: ' Log in',

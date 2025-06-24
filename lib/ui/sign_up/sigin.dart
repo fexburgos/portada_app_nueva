@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:portada_app_nueva/utils/validators.dart';
 
+
+
 class Sigin extends StatelessWidget {
   const Sigin({super.key});
 
   @override
   Widget build(BuildContext context) {
     final formKey = GlobalKey<FormState>();
+  
 
     return Scaffold(
       appBar: AppBar(),
@@ -35,6 +38,11 @@ class Sigin extends StatelessWidget {
                     ),
                   ),
                   TextFormField(
+                    textInputAction: TextInputAction.next,
+                    onChanged: (value){
+                      print('onChanged');
+                      print(value);
+                    },
                     decoration: const InputDecoration(
                       border: UnderlineInputBorder(),
                       labelText: 'Your name:',
@@ -44,6 +52,11 @@ class Sigin extends StatelessWidget {
                     ),
                   ),
                   TextFormField(
+                    textInputAction: TextInputAction.next,
+                    onChanged: (value) {
+                      print('onChanged');
+                      print(value);
+                    },
                     decoration: const InputDecoration(
                       border: UnderlineInputBorder(),
                       labelText: 'Your email:',
@@ -52,9 +65,10 @@ class Sigin extends StatelessWidget {
                       ),
                     ),
                     autovalidateMode: AutovalidateMode.onUnfocus,
-                    validator: EmailValidator.emailValidation,
+                    validator: Validators.validateEmail,
                   ),
                   TextFormField(
+                    textInputAction: TextInputAction.next,
                     decoration: const InputDecoration(
                       border: UnderlineInputBorder(),
                       labelText: 'Password:',
@@ -63,7 +77,17 @@ class Sigin extends StatelessWidget {
                       ),
                     ),
                   ),
-                  TextFormField(),
+                  TextFormField(
+                    textInputAction: TextInputAction.next,
+                    decoration: const InputDecoration(
+                      border: UnderlineInputBorder(),
+                      labelText: 'Confirm Password:',
+                      labelStyle: TextStyle(
+                        color: Color.fromARGB(255, 117, 202, 171),
+                      ),
+                    ),
+                  ),
+                  
                   ElevatedButton(
                     onPressed: () {
                       formKey.currentState?.validate();

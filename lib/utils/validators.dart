@@ -1,5 +1,6 @@
-class EmailValidator {
-  static String? emailValidation(String? email) {
+class Validators {
+
+  static String? validateEmail(String? email) {
     if (email == null || email.isEmpty) return 'Ingresa un email válido';
 
     final regExpr = RegExp(
